@@ -21,17 +21,36 @@ const examine = (word) => {
 }
 
 (function($) {
-    $.fn.bigBrother = function(){
+    $.fn.bigBrother = function(options){
+
+        let settings = $.extend({
+            censorType: "g",
+            keywords: null,
+            keyUnique: null
+        }, options)
+
         let text = $(this).val();
         let words = text.split(" ");
-        for(let i = 0; i < words.length; i++){
-            if(examine(words[i])){
-                words[i] = grawlixGen(words[i].length);
+        //for each word, examine and replace with...
+            for(let i = 0; i < words.length; i++){
+                if(examine(words[i])){
+                    //grawlix
+                    if(settings.censorType == "g"){
+                        words[i] = grawlixGen(words[i].length);
+                    }
+                    //[redacted]
+                    if(settings.censorType == "r"){
+                        words[i] = "[redacted]";
+                    }
+                    //removed
+                    if(settings.censorType == "x"){
+                        words.splice(i, 1);
+                    }
+                }
             }
-            console.log(words[i]);
-        }
+        
+        //join the array back into one string and return it
         words = words.join(" ")
-
         return words;
 
     }

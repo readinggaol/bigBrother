@@ -2,6 +2,8 @@
 
 $(document).ready( () => {
     $("#censor").click( () =>{
-        $("#output").text($("#user_input").bigBrother());
+        $("#output").text($("#user_input").bigBrother({
+            censorType: "x"
+        }));
     });
 })
