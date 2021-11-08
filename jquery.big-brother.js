@@ -17,11 +17,12 @@ const grawlixGen = (num) => {
 };
 
 const examine = (word, keys) => {
-    //define regex and load into array
-    let shit = new RegExp("[Ss][Hh][Ii][Tt]");
-    let fuck = new RegExp("[Ff][Uu][Cc][Kk]");
-    let regArr = [shit, fuck];
-
+    //define regex in array
+    let regArr = [
+        new RegExp("[Ss][Hh][Ii][Tt]"),
+        new RegExp("[Ff][Uu][Cc][Kk]"),
+        new RegExp("[Cc][Uu][Nn][Tt]")
+    ]
     //check word against user keywords
     if(keys.includes(word)){
         return new Word(word, true);
