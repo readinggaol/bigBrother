@@ -2,11 +2,12 @@
 
 $(document).ready( () => {
     $("#censor").click( () =>{
-        let myKeys = ["Tiananmen", "square"];
+        let myKeys = ["China", "Tiananmen", "Tankman"];
 
         $("#output").text($("#user_input").bigBrother({
-            censorType: "r",
-            keywords: myKeys
+            censorType: "g",
+            keywords: myKeys,
+            keyUnique: "r"
         }));
     });
 })
