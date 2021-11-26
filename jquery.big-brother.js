@@ -22,6 +22,7 @@ const examine = (word, keys) => {
         new RegExp("[Ss][Hh][Ii][Tt]"),
         new RegExp("[Ff][Uu][Cc][Kk]"),
         new RegExp("[Cc][Uu][Nn][Tt]")
+        //You get the idea
     ]
     //check word against user keywords
     if(keys.includes(word)){
