@@ -118,5 +118,3 @@ const handlePunctuation = (word) => {
         return words;
     }
 }(jQuery));
-
-
