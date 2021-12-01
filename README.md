@@ -2,7 +2,7 @@
 
 # INSTALLATION INSTRUCTIONS
 
-Step 1: Download the jquery.big-brother.js file and include it with a script tag in your project
+Step 1: Download the jquery.big-brother.js file and include it with a script tag in your project \n
 Step 2: Call the bigBrother() function on any text field!
 
 # BIG BROTHER OPTIONS
